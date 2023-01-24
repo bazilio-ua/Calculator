@@ -70,7 +70,7 @@ NSMutableString			*storex, *storey;
 		equalFlag = NO;
 
 		[storex setString:@""];
-		[storex appendFormat:@"%d", [[sender selectedCell] tag]];
+        [storex appendFormat:@"%ld", (long)[[sender selectedCell] tag]];
 		[display setStringValue:storex];
 	}
 	else
@@ -82,12 +82,12 @@ NSMutableString			*storex, *storey;
 				yFlag = YES;
 				[storey setString:@""];
 			}
-			[storey appendFormat:@"%d", [[sender selectedCell] tag]];
+            [storey appendFormat:@"%ld", (long)[[sender selectedCell] tag]];
 			[display setStringValue:storey];
 		}
 		else
 		{
-			[storex appendFormat:@"%d", [[sender selectedCell] tag]];
+            [storex appendFormat:@"%ld", (long)[[sender selectedCell] tag]];
 			[display setStringValue:storex];
 		}
 	}
